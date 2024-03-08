@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SideBar from '../components/SideBar';
+import { useNavigate } from 'react-router-dom';
 
 function Project(){
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const fn_clickProjectCard = () => {
+            navigate('/project/1');
+        }
+
+        document.querySelectorAll('.card').forEach((target) => {
+            target.addEventListener('click', fn_clickProjectCard);
+        })
+
+        return () => {
+            document.querySelectorAll('.card').forEach((target) => {
+                target.removeEventListener('click', fn_clickProjectCard);
+            })
+        }
+    }, [])
+
     return (
         <>
             <SideBar />
@@ -10,7 +29,7 @@ function Project(){
                     <div className="justify-main-between justify-sub-center">
                         <h2>프로젝트 목록</h2>
                         <div className="btn-div">
-                            <button className="btn-blue-blue w-140 h-35">프로젝트 생성</button>
+                            <button className="btn-blue-blue w-140 h-35" onClick={() => navigate('/project/write')}>프로젝트 생성</button>
                         </div>
                     </div>
                     <h3 className="sub-header">#최근 프로젝트</h3>
@@ -163,4 +182,4 @@ function Project(){
     );
 }
 
-export default Project();
+export default Project;

@@ -17,13 +17,14 @@ import Profile2 from '../assets/imgs/profile-example(2).png';
 import Profile3 from '../assets/imgs/profile-example(3).png';
 import Profile4 from '../assets/imgs/profile-example(4).png';
 import Profile5 from '../assets/imgs/profile-example(5).png';
+import Modal from '../components/Modal';
 
-function ProjectWrite(){
+function ProjectUpdate(){
     return (
         <div id="main" className="grid-1-3">
             <div className="main-div">
                 <div className="sub-div2 m-t-30 justify-sub-center justify-column gap-40">
-                    <h2>프로젝트 생성</h2>
+                    <h2>프로젝트 수정</h2>
                     <div className="w-100-per justify-column gap-10">
                         <b className="nessary">프로젝트 기간</b>
                         <div className="justify-main-left justify-sub-center gap-10">
@@ -365,4 +366,4 @@ function ProjectWrite(){
     );
 }
 
-export default ProjectWrite;
+export default ProjectUpdate;

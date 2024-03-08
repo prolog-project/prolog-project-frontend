@@ -188,7 +188,7 @@ textarea {border: 2px solid var(--black); padding: 20px; border-radius: 5px; fon
 .justify-main-right {display: flex; justify-content: end;}
 
 /* 버튼 */
-.page-up-btn {position: fixed; bottom: 5%; right: 1%;}
+.page-up-btn {position: fixed; bottom: 5%; right: 1%; cursor: pointer;}
 .page-up-btn img{width: 50px;}
 button {border-radius: 5px; font-weight: var(--bold); letter-spacing: 0.5px; cursor: pointer;}
 .header-btns {width:33%; display: flex; justify-content: right; gap: 20px;}
@@ -205,6 +205,7 @@ button {border-radius: 5px; font-weight: var(--bold); letter-spacing: 0.5px; cur
 .btn-white-green {background-color: var(--white); border: 2px solid var(--green); color: var(--black);}
 .btn-white-green:hover {background-color: var(--green); border: 2px solid var(--green); color: var(--white);}
 .btn-white-red {background-color: var(--white); border: 2px solid var(--red); color: var(--red);}
+.btn-white-red:hover {background-color: var(--red); color: var(--white);}
 .btn-black-black {background-color: var(--black); border: 2px solid var(--black); color: var(--white);}
 
 
@@ -236,7 +237,7 @@ button {border-radius: 5px; font-weight: var(--bold); letter-spacing: 0.5px; cur
 .calendar-div .date-body .days .days-item>picture.undo {background-image: url('./assets/imgs/calendar-undo.png'); background-repeat: no-repeat;}
 
 /* 모달 */
-.modal-div {display: flex; flex-direction: column; position: absolute; top: 50%; left: 50%; transform:translate(-50%, -50%); min-width: 550px; border: 2px solid var(--grey);}
+.modal-div {display: flex; flex-direction: column; position: fixed; top: 50%; left: 50%; transform:translate(-50%, -50%); min-width: 550px; border: 2px solid var(--grey);}
 .modal-div .modal-header {display: flex; justify-content: right; align-items: center; background-color: var(--blue); height: 50px;}
 .modal-div .modal-header>button {margin-right: 20px; border-radius: 30px; background-color: var(--red); color: var(--black); width: 25px; height: 25px; border: 0px; font-size: 20px; display: flex; justify-content: center; align-items: center;}
 .modal-div .modal-content {display: flex; flex-direction: column; padding: 40px; background-color: var(--white);}
@@ -364,5 +365,5 @@ progress-div {font-weight: var(--regular);}
 .tab {display: flex; background-color: var(--expiredgrey); border-radius: 30px 30px 0 0;}
 .tab>div {display: flex; justify-content: center; align-items: center; height: 90px; width: 50%; background-color: var(--expiredgrey); border-radius: 30px 30px 0 0; cursor: pointer; box-shadow: inset 0px -2px var(--grey);}
 .tab>div.on {background-color: var(--white); box-shadow: none;}
-.tab>div a {font-weight: var(--bold); font-size: 20px;}
-.tab>div a:hover {color: black;}
+.tab>div {font-weight: var(--bold); font-size: 20px;}
+.tab>div:hover {color: black;}

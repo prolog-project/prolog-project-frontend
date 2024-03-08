@@ -51,4 +51,4 @@ function MyPageUpdate(){
     );
 }
 
-export default MyPageUpdate();
+export default MyPageUpdate;

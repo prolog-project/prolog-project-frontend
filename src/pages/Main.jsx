@@ -2,8 +2,11 @@ import React from 'react';
 import main from '../assets/imgs/main.jpg';
 import arrowUp from '../assets/imgs/arrow-up.svg';
 import cursorPointer from '../assets/imgs/cursor-pointer.svg';
+import { useNavigate } from 'react-router-dom';
 
 function Main(){
+    const navigate = useNavigate();
+
     return(
         <div id="main" className="grid-1-3">
             <div className="main-img">
@@ -11,7 +14,7 @@ function Main(){
                 <div className="img-text-div">
                     <span className="img-main-text">내가 우리가 되는 시간</span>
                     <span className="img-main-text">나와 함께하는 프로젝트</span>
-                    <span className="img-sub-text">시작하기</span>
+                    <span className="img-sub-text" onClick={() => navigate("/myPage")}>시작하기</span>
                     <img className="ico-animation1" src={arrowUp} alt="위를 가리키는 화살표1" />
                     <img className="ico-animation2" src={arrowUp} alt="위를 가리키는 화살표2" />
                     <img className="ico-animation3" src={arrowUp} alt="위를 가리키는 화살표3" />

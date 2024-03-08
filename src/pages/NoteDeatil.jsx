@@ -1,7 +1,10 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
+import { useNavigate } from 'react-router-dom';
 
 function NoteDeatil(){
+    const navigate = useNavigate();
+
     return (
         <>
             <SideBar />
@@ -10,7 +13,7 @@ function NoteDeatil(){
                 <div className="justify-main-between justify-sub-center">
                     <h2>일지 상세</h2>
                     <div className="btn-div">
-                        <button className="btn-blue-blue w-140 h-35">일지 수정</button>
+                        <button className="btn-blue-blue w-140 h-35" onClick={() => navigate('/note/update/1')}>일지 수정</button>
                     </div>
                 </div>
                 <div className="sub-div2 m-t-30 justify-sub-center justify-column gap-20">
@@ -51,4 +54,4 @@ function NoteDeatil(){
     );
 }
 
-export default NoteDeatil();
+export default NoteDeatil;

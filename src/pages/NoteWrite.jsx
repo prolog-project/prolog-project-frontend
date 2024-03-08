@@ -123,7 +123,7 @@ function NoteWrite(){
                             </div>
                         </div>
                         <picture>
-                            <img style="width: 100%;" src={ProfileExamplePost} alt="" />
+                            <img style={{width: '100%'}} src={ProfileExamplePost} alt="" />
                         </picture>
                     </div>
                     <div className="justify-main-right m-t-30 w-100-per">
@@ -135,4 +135,4 @@ function NoteWrite(){
     );
 }
 
-export default NoteWrite();
+export default NoteWrite;

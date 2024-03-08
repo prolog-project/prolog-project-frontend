@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SideBar from '../components/SideBar';
 import ProfileExample from '../assets/imgs/profile-example.png';
 import ProfileExample2 from '../assets/imgs/profile-example(2).png'
@@ -9,8 +9,17 @@ import ProfileExample6 from '../assets/imgs/profile-example(6).png'
 import TestSkillIcons from '../assets/imgs/test-skill-icons.png'
 import TestProgressBar from '../assets/imgs/test-progress-bar.png'
 import ProgressDaysExample from '../assets/imgs/progress-days-example.png'
+import { useNavigate } from 'react-router-dom';
+import Modal from '../components/Modal';
 
 function ProjectDetail(){
+    const navigate = useNavigate();
+    const [showModal, setShowModal] = useState();
+
+    const fn_showModal = (bool = false) => {
+        setShowModal(bool);
+    };
+
     return (
         <>
             <SideBar />
@@ -19,8 +28,8 @@ function ProjectDetail(){
                     <div className="justify-main-between justify-sub-center">
                         <h2>프로젝트 목록</h2>
                         <div className="btn-div">
-                            <button className="btn-black-black w-140 h-35">팀원 초대하기</button>
-                            <button className="btn-blue-blue w-140 h-35">프로젝트 수정</button>
+                            <button className="btn-black-black w-140 h-35" onClick={() => fn_showModal(true)}>팀원 초대하기</button>
+                            <button className="btn-blue-blue w-140 h-35" onClick={() => navigate('/project/update')}>프로젝트 수정</button>
                         </div>
                     </div>
                     <div>
@@ -316,9 +325,10 @@ function ProjectDetail(){
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
+            { showModal ? <Modal fn_showModal = {fn_showModal} delimiter = "inviteTeammates" /> : null }
         </>
     );
 }
 
-export default ProjectDetail();
+export default ProjectDetail;

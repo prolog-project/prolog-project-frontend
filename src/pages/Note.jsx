@@ -93,4 +93,4 @@ function Note(){
     );
 }
 
-export default Note();
+export default Note;
