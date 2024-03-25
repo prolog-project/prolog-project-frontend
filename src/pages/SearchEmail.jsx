@@ -19,7 +19,7 @@ function SearchEmail(){
                             이메일 찾기
                         </div>
                         <div onClick={() => navigate('/searchPassword')}>
-                            비밀번호 재발급
+                            비밀번호 재설정
                         </div>
                     </div>
                     <div className="sub-div2 justify-column justify-sub-center gap-10">
