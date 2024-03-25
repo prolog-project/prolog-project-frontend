@@ -15,7 +15,9 @@ jobs:
         run: npm install
 
       - name: build
-        run: CI='false' npm run build
+        run: npm run build
+        env: 
+          CI: ""
 
       - env:
           AWS_ACCESS_KEY_ID: $({ secrets.AWS_ACCESS_KEY_ID })
